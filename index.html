@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+<body>
+
+    <div class="row">
+        <div class="column_left">
+            <div class="profile_pic_cont">
+                <img src="assets/me-2.jpg" class="profile_pic fade_in" />
+            </div>
+            <div class="profile_pic_cont">
+                <img src="assets/me-0.jpg" class="profile_pic fade_in" />
+            </div>
+            <div class="profile_pic_cont">
+                <img src="assets/me-1.jpg" class="profile_pic fade_in" />
+            </div>
+            <div class="profile_pic_cont">
+                <img src="assets/me-3.jpg" class="profile_pic fade_in" />
+            </div>
+
+            <div class="name_cont">
+                <h1 class="name" style="margin-bottom: 0;">Zakiya Azizah</h1>
+                <h2 class="name">Cahyaningtyas</h2>
+            </div>
+
+            <div class="profile_info">
+                <div style="margin-top: 30px;">
+                    <img src="assets/location-logo.png" id="loc-logo" class="icon_logo" style="vertical-align: middle;"/>
+                    <span style="vertical-align: bottom; font-size: 15px;" class="text"> Surabaya, Indonesia</span>
+                </div>
+                <div>
+                    <img src="assets/mail-logo.png" id="mail-logo" class="icon_logo" style="vertical-align: middle; cursor: s;"/>
+                    <span id="email" class="text interactive" onclick="copySpan('email')"> zakiyaac14@gmail.com </span>
+                </div>
+                <div>
+                    <img src="assets/phone-logo.png" id="phone-logo" class="icon_logo" style="vertical-align: middle;"/>
+                    <span id="phone" class="text interactive" onclick="copySpan('phone')"> +62 823-2583-3885 </span>
+                </div>
+            </div>
+
+            <div class="portfolio">
+                <div style="bottom: 0px; position: fixed;">
+                    <h5 style="font-size: 20px; margin: 0; left: 0;" class="text">Portfolio:</h5>
+                    <div>
+                        <img src="assets/github-logo.png" class="icon_logo interactive" style="display: inline;"/>
+                        <a href="https://github.com/coll-j/" target="_blank"><span class="text interactive" style="margin-right: 20px; cursor: pointer; font-weight: bold;">coll-j</span></a>
+                        <img src="assets/gitlab-logo.png" class="icon_logo" style="display: inline; left: 20px;"/>
+                        <a href="https://gitlab.com/Coll_J" target="_blank"><span class="text interactive" style="cursor: pointer; font-weight: bold;">Coll_j</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column_right">
+            <div class="main_content" style="width: 55%; float: left;">
+                <div class="page fade_in_page">
+                    <h1 class="text"> About me </h1>
+                    <div class="line"></div>
+                    <p class="text">
+                        Extremely motivated to constantly develop my skills and grow professionally. 
+                        Always looking for new things to experience and learn. 
+                        A goal-oriented and responsible yet easy-going person.
+                    </p>
+                    <button class="arrow down" onclick="arrowDownClicked()"></button>
+                </div>
+                <div class="page fade_in_page">
+                    <button class="arrow up" onclick="arrowUpClicked()"></button>
+                    <h1 class="text"> Skills </h1>
+                    <div class="line"></div>
+                    <ul class="text" style="color:white; font-size: 30px;">
+                        <li>Ability to self-taught and multi-task</li>
+                        <li>Intermediate English and programming skills</li>
+                        <li>Adaptive</li>
+                        <li>Hardworker and responsible</li>
+                        <li>Always eager to improve and learn new things</li>
+                    </ul>
+                    <button class="arrow down" onclick="arrowDownClicked()"></button>
+                </div>
+                <div class="page fade_in_page">
+                    <button class="arrow up" onclick="arrowUpClicked()"></button>
+                    <h1 class="text" style="margin-top: 70px;"> Education </h1>
+                    <div class="line"></div>
+                    <div class="school">
+                        <div class="school-logos">
+                            <img src="assets/62-logo.png"/>
+                            <p class="text">SMAN 62 Jakarta Timur<br>(2015 - 2018)</p>
+                        </div>
+                        <div class="school-logos" style="margin-left: 15%;">
+                            <img src="assets/its-logo.png" style="margin-bottom: 25px;"/>
+                            <p class="text">Institut Teknologi Sepuluh Nopember<br>(2018 - NOW)</p>
+                        </div>
+                    </div>
+                    <button class="arrow down" onclick="arrowDownClicked()"></button>
+                </div>
+                <div class="page fade_in_page">
+                    <button class="arrow up" onclick="arrowUpClicked()"></button>
+                    <h1 class="text" style="margin-top: 70px;"> Experience </h1>
+                    <div class="line"></div>
+                    <ul class="text" style="color:white; font-size: 30px;">
+                        <li>Programmer at ICHIRO-ITS Robotics Team (2019)</li>
+                        <li>Schematics ITS 2019 Staff of Logisctics Committees</li>
+                        <li>Exchange student at University of Applied Science in Nysa, Poland 
+                            under Erasmus+ mobility programme scholarship</li>
+                        <li>Administrator of Computational Intelligence and Vision Laboratory</li>
+                        <li>Selected participant of MLSS-Indo 2020</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="side-menu">
+                <div>
+                    <h1 class="text" style="color: whitesmoke;">Content</h1>
+                    <div class="line" style="margin-left: 55%;"></div>
+                    <div class="btn-group">
+                        <button onclick="showPageNumb(0)">About me</button>
+                        <button onclick="showPageNumb(1)">Skills</button>
+                        <button onclick="showPageNumb(2)">Education</button>
+                        <button onclick="showPageNumb(3)">Experience</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-paragraph" class="text">Some text in the Modal..</p>
+        </div>
+    
+    </div>
+  
+    <script src="main.js"></script>
+</body>
+</html>

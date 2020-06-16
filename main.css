@@ -1,0 +1,286 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: 0;
+}
+
+.row {
+    height: 100%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column_left {
+    width: 27%;
+    height: 100%;
+    float: left;
+}
+
+.profile_pic_cont {
+    left: 0px;
+    position: relative;
+    display: block;
+    text-align: center;
+    background-color: #a5acf2;
+}
+.profile_pic {
+    width: 40%;
+    height: 40%;
+    padding: 20px;
+    border-radius: 999px;
+}
+
+.fade_in {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 5.5s;
+animation-name: fade;
+animation-duration: 5.5s;
+}
+
+.fade_in_page {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+.name_cont {
+    width: 100%;
+    height: 20%;
+    float: left;
+    position: relative;
+    text-align: center;
+    background-color: #a5acf2;
+}
+
+.name {
+    margin-top: 0;
+    font-family: "Century Gothic";
+}
+
+.profile_info {
+    width: 100%;
+    height: 50%;
+    background-color: #a5acf2;
+}
+
+.icon_logo {
+    margin-top: 10px;
+    margin-left: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.portfolio {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-color: #a5acf2;
+}
+
+.text {
+    font-family: "Century Gothic";
+}
+
+.column_right {
+    left: 27.2%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: midnightblue;
+}
+
+.page h1 {
+    color: white;
+    font-size: 70px;
+    margin-left: 30px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.line {
+    margin-left: 30px;
+    width: 60%;
+    border-bottom: 3px solid white;
+}
+
+.page p{
+    color: white;
+    font-size: 30px;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+@keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+
+@keyframes MoveUp {
+    0%, 100% {
+      top: 20px;
+    }
+    50% {
+      top: 30px;
+    }
+  }
+
+@keyframes MoveDown {
+0%, 100% {
+    bottom: 20px;
+}
+50% {
+    bottom: 30px;
+}
+}
+.arrow {
+    background: transparent;
+    border: solid white;
+    border-width: 0 7px 7px 0;
+    display: inline-block;
+    padding: 7px;
+    cursor: pointer;
+}
+.up {
+    top: 20px;
+    left: 35%;
+    position: absolute;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+
+    -webkit-animation: flickerAnimation 2s infinite, MoveUp 2s infinite;
+    -moz-animation: flickerAnimation 2s infinite, MoveUp 2s infinite;
+    -o-animation: flickerAnimation 2s infinite, MoveUp 2s infinite;
+    animation: flickerAnimation 2s infinite, MoveUp 2s infinite;
+}
+
+.down {
+    bottom: 20px;
+    left: 35%;
+    position: absolute;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+
+    -webkit-animation: flickerAnimation 2s infinite, MoveDown 2s infinite;
+    -moz-animation: flickerAnimation 2s infinite, MoveDown 2s infinite;
+    -o-animation: flickerAnimation 2s infinite, MoveDown 2s infinite;
+    animation: flickerAnimation 2s infinite, MoveDown 2s infinite;
+}
+
+.school {
+    width: 100%;
+    float: left;
+}
+.school img{
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 0;
+}
+
+.school-logos {
+    text-align: center; 
+    float: left; 
+    margin-left: 30px;
+    width: 35%;
+}
+
+.school p{
+    margin-left: 60px; 
+    font-size: 20px;
+}
+
+.btn-group button {
+    font-family: "Century Gothic";
+    background-color: midnightblue;
+    border: none;
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    display: block;
+  }
+  
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .profile_info .interactive {
+    vertical-align: bottom; 
+    font-size: 15px; 
+    cursor: pointer;
+  }
+
+  .interactive:hover {
+      color: white;
+  }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin-left: 30%;
+    margin-top: 10%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
