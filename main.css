@@ -18,6 +18,8 @@ html, body {
     width: 27%;
     height: 100%;
     float: left;
+    /* background-color: #4f5e7b; */
+    background-color: #9e9da2;
 }
 
 .profile_pic_cont {
@@ -25,13 +27,15 @@ html, body {
     position: relative;
     display: block;
     text-align: center;
-    background-color: #a5acf2;
 }
 .profile_pic {
     width: 40%;
     height: 40%;
-    padding: 20px;
+    padding: 5px;
     border-radius: 999px;
+    border: 5px solid black;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .fade_in {
@@ -64,7 +68,6 @@ to {opacity: 1}
     float: left;
     position: relative;
     text-align: center;
-    background-color: #a5acf2;
 }
 
 .name {
@@ -75,7 +78,6 @@ to {opacity: 1}
 .profile_info {
     width: 100%;
     height: 50%;
-    background-color: #a5acf2;
 }
 
 .icon_logo {
@@ -89,19 +91,33 @@ to {opacity: 1}
     width: 100%;
     height: 100%;
     display: inline-block;
-    background-color: #a5acf2;
+}
+
+/* montserrat-regular - latin */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+src: url('assets/montserrat/montserrat-v14-latin-regular.eot'); /* IE9 Compat Modes */
+src: local('Montserrat Regular'), local('Montserrat-Regular'),
+        url('assets/montserrat/montserrat-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('assets/montserrat/montserrat-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+        url('assets/montserrat/montserrat-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+        url('assets/montserrat/montserrat-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('assets/montserrat/montserrat-v14-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
 
 .text {
-    font-family: "Century Gothic";
+    font-family: "Montserrat";
 }
 
 .column_right {
-    left: 27.2%;
+    left: 27%;
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: midnightblue;
+    /* background-color: #9e9da2; */
+    background-color: #4f5e7b;
 }
 
 .page h1 {
@@ -202,11 +218,9 @@ to {opacity: 1}
     float: left;
 }
 .school img{
-    width: 100%;
+    width: 70%;
     float: left;
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-bottom: 0;
+    margin: 15%;
 }
 
 .school-logos {
@@ -217,14 +231,16 @@ to {opacity: 1}
 }
 
 .school p{
-    margin-left: 60px; 
+    margin-left: 10px; 
     font-size: 20px;
 }
 
 .btn-group button {
     font-family: "Century Gothic";
-    background-color: midnightblue;
+    font-size: 20px;
+    background-color: #4f5e7b;
     border: none;
+    outline: none;
     color: white; /* White text */
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
@@ -240,11 +256,23 @@ to {opacity: 1}
     vertical-align: bottom; 
     font-size: 15px; 
     cursor: pointer;
+
+
   }
 
   .interactive:hover {
       color: white;
   }
+
+@-webkit-keyframes fade-out {
+from {opacity: 1} 
+to {opacity: 0.6}
+}
+
+@keyframes fade-out {
+from {opacity: 1} 
+to {opacity: 0.6}
+}
 
 /* The Modal (background) */
 .modal {
@@ -258,6 +286,11 @@ to {opacity: 1}
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+    -webkit-animation: fade-out 6s;
+    -moz-animation: fade-out 6s;
+    -o-animation: fade-out 6s;
+    animation: fade-out 6s;
   }
   
   /* Modal Content */
@@ -268,6 +301,11 @@ to {opacity: 1}
     padding: 20px;
     border: 1px solid #888;
     width: 30%;
+
+    -webkit-animation: fade-out 6s;
+    -moz-animation: fade-out 6s;
+    -o-animation: fade-out 6s;
+    animation: fade-out 6s;
   }
   
   /* The Close Button */
@@ -284,3 +322,28 @@ to {opacity: 1}
     text-decoration: none;
     cursor: pointer;
   }
+
+.git-logo {
+    text-align: center; 
+    float: left; 
+    margin: 15%;
+    width: 20%;
+    display: inline-block;
+}
+
+.git-logo .img-back{
+    width: 100%;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.git-logo .text {
+    font-size: 30px;
+    margin-left: 50px;
+    color: black;
+}
+
+.git-logo .text:hover {
+    color: white;
+}

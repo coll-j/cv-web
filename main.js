@@ -1,6 +1,6 @@
 var slideIndex = 0, pageIndex = 0, lastScrollTop = 0;
 showSlides();
-showPage();
+showPageNumb(0);
 
 function showSlides() {
   var i;
@@ -45,7 +45,6 @@ function arrowUpClicked()
 }
 
 var modal = document.getElementById("myModal");
-var span = document.getElementsByClassName("close")[0];
 var modal_content = document.getElementById("modal-paragraph");
 
 function copySpan(id)
@@ -61,14 +60,7 @@ function copySpan(id)
   text += " coppied."
   modal_content.innerHTML = text;
   modal.style.display = "block";
-}
-
-function onScroll() {
-  
-}
-
-span.onclick = function() {
-  modal.style.display = "none";
+  setTimeout(() => {modal.style.display = "none"}, 2000)
 }
 
 window.onclick = function(event) {
@@ -89,3 +81,32 @@ window.onwheel = function(event) {
   this.lastScrollTop = currentScrollPos;
 }
 
+var githubText = document.getElementById("github-text");
+var gitlabText = document.getElementById("gitlab-text");
+
+function hover(element) {
+  if(element.id == "github" || element.id == "github-text") 
+  {
+    element.setAttribute('src', 'assets/github-logo-white.png');
+    githubText.style.color = 'white';
+  }
+  else 
+  {
+    element.setAttribute('src', 'assets/gitlab-logo-white.png');
+    gitlabText.style.color = 'white';
+  }
+}
+
+function unhover(element) {
+  if(element.id == "github" || element.id == "github-text") 
+  {
+    element.setAttribute('src', 'assets/github-logo-black.png');
+    githubText.style.color = 'black';
+  }
+  else 
+  {
+    element.setAttribute('src', 'assets/gitlab-logo-black.png');
+    gitlabText.style.color = 'black';
+  }
+
+}

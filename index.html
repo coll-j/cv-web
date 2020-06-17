@@ -10,49 +10,35 @@
     <div class="row">
         <div class="column_left">
             <div class="profile_pic_cont">
-                <img src="assets/me-2.jpg" class="profile_pic fade_in" />
+                <img src="./assets/me-0.jpg" class="profile_pic fade_in" />
             </div>
             <div class="profile_pic_cont">
-                <img src="assets/me-0.jpg" class="profile_pic fade_in" />
+                <img src="./assets/me-1.jpg" class="profile_pic fade_in" />
             </div>
             <div class="profile_pic_cont">
-                <img src="assets/me-1.jpg" class="profile_pic fade_in" />
-            </div>
-            <div class="profile_pic_cont">
-                <img src="assets/me-3.jpg" class="profile_pic fade_in" />
+                <img src="./assets/me-3.jpg" class="profile_pic fade_in" />
             </div>
 
             <div class="name_cont">
-                <h1 class="name" style="margin-bottom: 0;">Zakiya Azizah</h1>
-                <h2 class="name">Cahyaningtyas</h2>
+                <h1 class="name text" style="margin-bottom: 0;">Zakiya Azizah</h1>
+                <h2 class="name text">Cahyaningtyas</h2>
+                <div class="line" style="margin-left: 20%; border-bottom: 3px solid black;"></div>
             </div>
-
-            <div class="profile_info">
+            <div class="profile_info" style="font-weight: bold; margin-left: 10px;">
                 <div style="margin-top: 30px;">
-                    <img src="assets/location-logo.png" id="loc-logo" class="icon_logo" style="vertical-align: middle;"/>
-                    <span style="vertical-align: bottom; font-size: 15px;" class="text"> Surabaya, Indonesia</span>
+                    <img src="./assets/location-logo.png" id="loc-logo" class="icon_logo" style="vertical-align: middle;"/>
+                    <span style="vertical-align: bottom; " class="text"> Surabaya, Indonesia</span>
                 </div>
                 <div>
-                    <img src="assets/mail-logo.png" id="mail-logo" class="icon_logo" style="vertical-align: middle; cursor: s;"/>
+                    <img src="./assets/mail-logo.png" id="mail-logo" class="icon_logo" style="vertical-align: middle;"/>
                     <span id="email" class="text interactive" onclick="copySpan('email')"> zakiyaac14@gmail.com </span>
                 </div>
                 <div>
-                    <img src="assets/phone-logo.png" id="phone-logo" class="icon_logo" style="vertical-align: middle;"/>
+                    <img src="./assets/phone-logo.png" id="phone-logo" class="icon_logo" style="vertical-align: middle;"/>
                     <span id="phone" class="text interactive" onclick="copySpan('phone')"> +62 823-2583-3885 </span>
                 </div>
             </div>
 
-            <div class="portfolio">
-                <div style="bottom: 0px; position: fixed;">
-                    <h5 style="font-size: 20px; margin: 0; left: 0;" class="text">Portfolio:</h5>
-                    <div>
-                        <img src="assets/github-logo.png" class="icon_logo interactive" style="display: inline;"/>
-                        <a href="https://github.com/coll-j/" target="_blank"><span class="text interactive" style="margin-right: 20px; cursor: pointer; font-weight: bold;">coll-j</span></a>
-                        <img src="assets/gitlab-logo.png" class="icon_logo" style="display: inline; left: 20px;"/>
-                        <a href="https://gitlab.com/Coll_J" target="_blank"><span class="text interactive" style="cursor: pointer; font-weight: bold;">Coll_j</span></a>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="column_right">
             <div class="main_content" style="width: 55%; float: left;">
@@ -85,12 +71,12 @@
                     <div class="line"></div>
                     <div class="school">
                         <div class="school-logos">
-                            <img src="assets/62-logo.png"/>
+                            <img src="./assets/62-logo.png"/>
                             <p class="text">SMAN 62 Jakarta Timur<br>(2015 - 2018)</p>
                         </div>
                         <div class="school-logos" style="margin-left: 15%;">
-                            <img src="assets/its-logo.png" style="margin-bottom: 25px;"/>
-                            <p class="text">Institut Teknologi Sepuluh Nopember<br>(2018 - NOW)</p>
+                            <img src="./assets/its-logo.png" style="width: 80%; margin-bottom: 30px;"/>
+                            <p class="text" style="margin-left: 30px;">Institut Teknologi Sepuluh Nopember<br>(2018 - NOW)</p>
                         </div>
                     </div>
                     <button class="arrow down" onclick="arrowDownClicked()"></button>
@@ -107,18 +93,36 @@
                         <li>Administrator of Computational Intelligence and Vision Laboratory</li>
                         <li>Selected participant of MLSS-Indo 2020</li>
                     </ul>
+                    <button class="arrow down" onclick="arrowDownClicked()"></button>
+                </div>
+                <div class="page fade_in_page">
+                    <button class="arrow up" onclick="arrowUpClicked()"></button>
+                    <h1 class="text" style="margin-top: 70px;"> Portfolio </h1>
+                    <div class="line"></div>
+                    <div style="width: 100%;">
+                        <div class="git-logo">
+                            <a href="https://github.com/coll-j" target="_blank" style="text-decoration: none;">
+                            <img src="./assets/github-logo-black.png" class="img-back" id="github" onmouseover="hover(this)" onmouseout="unhover(this);"/>
+                            <h1 id="github-text" class="text" >coll-j</h1>
+                            </a>
+                        </div>
+                        <div class="git-logo">
+                            <a href="https://gitlab.com/Coll_J" target="_blank" style="text-decoration: none;">
+                            <img src="./assets/gitlab-logo-black.png" class="img-back" id="gitlab" onmouseover="hover(this)" onmouseout="unhover(this);"/>
+                            <h1 id="gitlab-text" class="text" >coll_j</h1>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="side-menu">
-                <div>
-                    <h1 class="text" style="color: whitesmoke;">Content</h1>
-                    <div class="line" style="margin-left: 55%;"></div>
+                <div style="margin-top: 20px;">
                     <div class="btn-group">
                         <button onclick="showPageNumb(0)">About me</button>
                         <button onclick="showPageNumb(1)">Skills</button>
                         <button onclick="showPageNumb(2)">Education</button>
                         <button onclick="showPageNumb(3)">Experience</button>
-
+                        <button onclick="showPageNumb(4)">Portfolio</button>
                     </div>
                 </div>
             </div>
@@ -129,7 +133,6 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-            <span class="close">&times;</span>
             <p id="modal-paragraph" class="text">Some text in the Modal..</p>
         </div>
     
